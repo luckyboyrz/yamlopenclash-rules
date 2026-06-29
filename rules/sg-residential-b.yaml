@@ -1,0 +1,14 @@
+payload:
+  # Domains confirmed reachable through residential exit B but not exit A.
+  - DOMAIN-SUFFIX,americanstatebank.com
+  - DOMAIN-SUFFIX,bund.de
+  - DOMAIN-SUFFIX,clintonnational.com
+  - DOMAIN-SUFFIX,cmbank.ru
+  - DOMAIN-SUFFIX,firstoptionbank.com
+  - DOMAIN-SUFFIX,horizoncapital.co.za
+  - DOMAIN-SUFFIX,hsbc.com.tw
+  - DOMAIN-SUFFIX,milledgevillebank.com
+  - DOMAIN-SUFFIX,portagecountybank.com
+
+  # Hang Seng Bank Hong Kong. The Mainland domain hangseng.com.cn stays direct.
+  - DOMAIN-SUFFIX,hangseng.com
