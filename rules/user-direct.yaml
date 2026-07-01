@@ -1,0 +1,12 @@
+payload:
+  # Add one rule per line. Keep the leading "- " and do not add a policy name.
+  #
+  # Match a domain and all of its subdomains:
+  # - DOMAIN-SUFFIX,example.com
+  #
+  # Match one exact hostname only:
+  # - DOMAIN,www.example.com
+  #
+  # Match an IPv4 or IPv6 network (no-resolve avoids an extra DNS lookup):
+  # - IP-CIDR,192.0.2.0/24,no-resolve
+  # - IP-CIDR6,2001:db8::/32,no-resolve
