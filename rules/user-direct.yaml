@@ -1,13 +1,10 @@
 payload:
-  # These IANA-reserved examples keep the initial provider valid. Replace or
-  # delete them after adding real rules. Keep "- " and omit the policy name.
-
-  # Match a domain and all of its subdomains.
-  - DOMAIN-SUFFIX,example.com
-
-  # Match one exact hostname only.
-  - DOMAIN,www.example.net
-
-  # Match an IPv4 or IPv6 network; no-resolve avoids an extra DNS lookup.
-  - IP-CIDR,192.0.2.0/24,no-resolve
-  - IP-CIDR6,2001:db8::/32,no-resolve
+  - DOMAIN,yvpn.sinosig.com
+  - DOMAIN,yvpn.eyangguang.com
+  - DOMAIN-SUFFIX,sinosig.com
+  - DOMAIN-SUFFIX,eyangguang.com
+  - DOMAIN,swupdate.hillstonenet.com
+  - DOMAIN-SUFFIX,hillstonenet.com
+  - IP-CIDR,122.115.58.67/32,no-resolve
+  - IP-CIDR,219.141.247.50/32,no-resolve
+  - IP-CIDR,120.55.170.93/32,no-resolve
