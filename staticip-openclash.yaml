@@ -96,16 +96,28 @@ proxies:
 # ========================
 # 主要端口设置
 # ========================
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
 
+allow-lan: true
 mode: rule
 log-level: info
 
+external-controller: 0.0.0.0:9090
+external-ui: ui
+external-ui-name: zashboard
+external-ui-url: https://gh-proxy.com/github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip
+secret: "123456"
 
 # ========================
 # DNS 设置
 # ========================
 dns:
   enable: true
+  listen: 0.0.0.0:7874
 
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
@@ -811,6 +823,7 @@ rules:
   # ==================================================
   # 14. 通用直连域名规则
   # ==================================================
+  - RULE-SET,Direct,全球直连
   - GEOSITE,cn,全球直连
 
   # ==================================================
@@ -844,11 +857,16 @@ rule-providers:
     url: https://cdn.jsdelivr.net/gh/luckyboyrz/yamlopenclash-rules@main/rules/sg-residential-b.yaml
     path: ./providers/sg-residential-b.yaml
     interval: 86400
+  Direct:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt
+    path: ./providers/direct.yaml
+    interval: 86400
   Proxy:
     type: http
     behavior: domain
-    # Use jsDelivr's Fastly endpoint instead of cdn.jsdelivr.net for iOS.
-    url: https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt
     path: ./providers/proxy.yaml
     interval: 86400
   Applications:
