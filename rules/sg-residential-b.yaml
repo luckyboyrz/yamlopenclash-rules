@@ -1,7 +1,6 @@
 payload:
-  # Google Play control and delivery traffic. Keep the complete Play flow on
-  # one exit so that authorization, signed download URLs and CDN requests do
-  # not use different public IP addresses.
+  # Google Play 控制与下载流量。
+  # 将授权、签名下载地址和 CDN 请求固定在同一出口，避免因公网 IP 不一致导致下载卡住。
   - DOMAIN-SUFFIX,googleplay.com
   - DOMAIN,play.google.com
   - DOMAIN,play-fe.googleapis.com
@@ -13,8 +12,8 @@ payload:
   - DOMAIN-SUFFIX,gvt1.com
   - DOMAIN-SUFFIX,xn--ngstr-lra8j.com
 
-  # The following sites are currently reachable through the primary exit.
-  # Keep the old rules commented out so they can be restored if needed.
+  # 以下网站目前已可通过主出口正常访问。
+  # 暂时保留为注释，后续如果主出口再次无法访问，可以直接取消注释恢复分流。
   # - DOMAIN-SUFFIX,americanstatebank.com
   # - DOMAIN-SUFFIX,bund.de
   # - DOMAIN-SUFFIX,clintonnational.com
@@ -25,10 +24,10 @@ payload:
   # - DOMAIN-SUFFIX,milledgevillebank.com
   # - DOMAIN-SUFFIX,portagecountybank.com
 
-  # Hang Seng Bank Hong Kong. The Mainland domain hangseng.com.cn stays direct.
+  # 香港恒生银行；中国大陆域名 hangseng.com.cn 仍保持直连。
   # - DOMAIN-SUFFIX,hangseng.com
 
-  # Interactive Brokers / IBKR.
+  # 盈透证券（Interactive Brokers / IBKR）。
   # - DOMAIN-SUFFIX,ibkr.ca
   # - DOMAIN-SUFFIX,ibkr.co.in
   # - DOMAIN-SUFFIX,ibkr.co.uk
