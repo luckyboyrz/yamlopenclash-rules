@@ -1,37 +1,44 @@
 payload:
-  # Domains confirmed reachable through residential exit B but not exit A.
-  - DOMAIN-SUFFIX,americanstatebank.com
-  - DOMAIN-SUFFIX,bund.de
-  - DOMAIN-SUFFIX,clintonnational.com
-  - DOMAIN-SUFFIX,cmbank.ru
-  - DOMAIN-SUFFIX,firstoptionbank.com
-  - DOMAIN-SUFFIX,horizoncapital.co.za
-  - DOMAIN-SUFFIX,hsbc.com.tw
-  - DOMAIN-SUFFIX,milledgevillebank.com
-  - DOMAIN-SUFFIX,portagecountybank.com
+  # Google Play app delivery. Store browsing can work while these download
+  # endpoints are blocked or degraded by the primary exit.
+  - DOMAIN,play.googleapis.com
+  - DOMAIN,android.clients.google.com
+  - DOMAIN-SUFFIX,gvt1.com
+
+  # The following sites are currently reachable through the primary exit.
+  # Keep the old rules commented out so they can be restored if needed.
+  # - DOMAIN-SUFFIX,americanstatebank.com
+  # - DOMAIN-SUFFIX,bund.de
+  # - DOMAIN-SUFFIX,clintonnational.com
+  # - DOMAIN-SUFFIX,cmbank.ru
+  # - DOMAIN-SUFFIX,firstoptionbank.com
+  # - DOMAIN-SUFFIX,horizoncapital.co.za
+  # - DOMAIN-SUFFIX,hsbc.com.tw
+  # - DOMAIN-SUFFIX,milledgevillebank.com
+  # - DOMAIN-SUFFIX,portagecountybank.com
 
   # Hang Seng Bank Hong Kong. The Mainland domain hangseng.com.cn stays direct.
-  - DOMAIN-SUFFIX,hangseng.com
+  # - DOMAIN-SUFFIX,hangseng.com
 
   # Interactive Brokers / IBKR.
-  - DOMAIN-SUFFIX,ibkr.ca
-  - DOMAIN-SUFFIX,ibkr.co.in
-  - DOMAIN-SUFFIX,ibkr.co.uk
-  - DOMAIN-SUFFIX,ibkr.com
-  - DOMAIN-SUFFIX,ibkr.com.au
-  - DOMAIN-SUFFIX,ibkr.com.hk
-  - DOMAIN-SUFFIX,ibkr.com.sg
-  - DOMAIN-SUFFIX,ibkr.eu
-  - DOMAIN-SUFFIX,ibkr.ie
-  - DOMAIN-SUFFIX,ibkrguides.com
-  - DOMAIN-SUFFIX,ibllc.com
-  - DOMAIN-SUFFIX,interactivebrokers.ca
-  - DOMAIN-SUFFIX,interactivebrokers.co.in
-  - DOMAIN-SUFFIX,interactivebrokers.co.jp
-  - DOMAIN-SUFFIX,interactivebrokers.co.uk
-  - DOMAIN-SUFFIX,interactivebrokers.com
-  - DOMAIN-SUFFIX,interactivebrokers.com.au
-  - DOMAIN-SUFFIX,interactivebrokers.com.hk
-  - DOMAIN-SUFFIX,interactivebrokers.com.sg
-  - DOMAIN-SUFFIX,interactivebrokers.eu
-  - DOMAIN-SUFFIX,interactivebrokers.ie
+  # - DOMAIN-SUFFIX,ibkr.ca
+  # - DOMAIN-SUFFIX,ibkr.co.in
+  # - DOMAIN-SUFFIX,ibkr.co.uk
+  # - DOMAIN-SUFFIX,ibkr.com
+  # - DOMAIN-SUFFIX,ibkr.com.au
+  # - DOMAIN-SUFFIX,ibkr.com.hk
+  # - DOMAIN-SUFFIX,ibkr.com.sg
+  # - DOMAIN-SUFFIX,ibkr.eu
+  # - DOMAIN-SUFFIX,ibkr.ie
+  # - DOMAIN-SUFFIX,ibkrguides.com
+  # - DOMAIN-SUFFIX,ibllc.com
+  # - DOMAIN-SUFFIX,interactivebrokers.ca
+  # - DOMAIN-SUFFIX,interactivebrokers.co.in
+  # - DOMAIN-SUFFIX,interactivebrokers.co.jp
+  # - DOMAIN-SUFFIX,interactivebrokers.co.uk
+  # - DOMAIN-SUFFIX,interactivebrokers.com
+  # - DOMAIN-SUFFIX,interactivebrokers.com.au
+  # - DOMAIN-SUFFIX,interactivebrokers.com.hk
+  # - DOMAIN-SUFFIX,interactivebrokers.com.sg
+  # - DOMAIN-SUFFIX,interactivebrokers.eu
+  # - DOMAIN-SUFFIX,interactivebrokers.ie
