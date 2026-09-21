@@ -1,9 +1,17 @@
 payload:
-  # Google Play app delivery. Store browsing can work while these download
-  # endpoints are blocked or degraded by the primary exit.
+  # Google Play control and delivery traffic. Keep the complete Play flow on
+  # one exit so that authorization, signed download URLs and CDN requests do
+  # not use different public IP addresses.
+  - DOMAIN-SUFFIX,googleplay.com
+  - DOMAIN,play.google.com
+  - DOMAIN,play-fe.googleapis.com
+  - DOMAIN,play-games.googleusercontent.com
+  - DOMAIN,play-lh.googleusercontent.com
   - DOMAIN,play.googleapis.com
   - DOMAIN,android.clients.google.com
+  - DOMAIN,services.googleapis.cn
   - DOMAIN-SUFFIX,gvt1.com
+  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com
 
   # The following sites are currently reachable through the primary exit.
   # Keep the old rules commented out so they can be restored if needed.
