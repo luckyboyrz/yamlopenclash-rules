@@ -8,6 +8,7 @@ payload:
   - DOMAIN,play-lh.googleusercontent.com
   - DOMAIN,play.googleapis.com
   - DOMAIN,android.clients.google.com
-  - DOMAIN,services.googleapis.cn
+  # lumi 拒绝此域名；改由 user-direct.yaml 优先直连。
+  # - DOMAIN,services.googleapis.cn
   - DOMAIN-SUFFIX,gvt1.com
   - DOMAIN-SUFFIX,xn--ngstr-lra8j.com

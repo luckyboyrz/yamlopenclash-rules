@@ -1,4 +1,6 @@
 payload:
+  # Google Play 接口：避开 lumi 的域名访问限制。
+  - DOMAIN,services.googleapis.cn
   - DOMAIN,yvpn.sinosig.com
   - DOMAIN,yvpn.eyangguang.com
   - DOMAIN-SUFFIX,sinosig.com
