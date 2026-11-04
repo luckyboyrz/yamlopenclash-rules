@@ -1,6 +1,9 @@
 payload:
   # Google Play 接口：避开 lumi 的域名访问限制。
   - DOMAIN,services.googleapis.cn
+  # Google Play 国内下载 CDN（北京、上海、广州），兼容后续 googlevideo 重定向。
+  - 'DOMAIN-REGEX,^r+[0-9]+(---|\.)sn-(2x3|ni5|j5o)\w{5}\.xn--ngstr-lra8j\.com$'
+  - 'DOMAIN-REGEX,^r+[0-9]+(---|\.)sn-(2x3|ni5|j5o)\w{5}\.googlevideo\.com$'
   - DOMAIN,yvpn.sinosig.com
   - DOMAIN,yvpn.eyangguang.com
   - DOMAIN-SUFFIX,sinosig.com
