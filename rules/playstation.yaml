@@ -1,10 +1,9 @@
 payload:
-  # Sony 账号认证 API 和 PS App 登录页面。
-  - DOMAIN,ca.account.sony.com
-  - DOMAIN,my.account.sony.com
+  # Sony 共享账号认证，包括 ca.account.sony.com 和 my.account.sony.com。
+  - DOMAIN-SUFFIX,account.sony.com
 
   # PSN 主机与移动端 API、商店、社区、奖杯和账号服务。
-  # 下载与固件域名需在主配置优先匹配直连。
+  # 下载与固件域名由优先匹配的 user-direct.yaml 处理。
   - DOMAIN-SUFFIX,playstation
   - DOMAIN-SUFFIX,playstation.com
   - DOMAIN-SUFFIX,playstation.net
